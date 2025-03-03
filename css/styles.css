@@ -1,9 +1,10 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #da55ec, #fad0c4);
+    background: linear-gradient(to bottom, #f8f7f7, #020202);
     text-align: center;
 }
+
 .contenedor {
     position: relative;
     width: 100%;
@@ -11,12 +12,13 @@ body {
     background: url('../assets/imagen_fondo(1).JPG') no-repeat center center;
     background-size: cover;
 }
+
 nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     padding: 20px 1px; /* Agrega espacio a los lados izquierdo y derecho del nav */
-    background: rgba(0, 0, 0, 0.8);
+    background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
     position: fixed;
     width: 100%;
     top: 0;
@@ -67,9 +69,9 @@ nav ul li a {
     transform: translate(-50%, -50%);
     text-align: center;
     color: white;
-    text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
     padding: 30px;
-    background: rgba(0, 0, 0, 0.008); /* Fondo oscuro para destacar texto */
+    background: rgba(0, 0, 0, 0.3); /* Fondo oscuro con algo de transparencia */
     border-radius: 10px; /* Bordes redondeados */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
     width: 80%; /* Ancho del rectángulo */
@@ -78,26 +80,174 @@ nav ul li a {
     font-family: 'Shrikhand', sans-serif; /* Fuente Shrikhand para el texto */
     font-size: 1.5rem; /* Tamaño de fuente más grande */
 }
-#acerca, #experiencia, #estudios, #proyectos, #contacto {
-    padding: 50px;
-    background: white;
-    border-radius: 10px;
-    margin: 50px auto;
+
+#acerca {
+    background: #e8aced; /* Un color durazno suave */
+    color: #333; /* Texto oscuro para contraste */
+}
+
+#experiencia {
+    background: #c1e1ff; /* Azul claro */
+    color: #333;
+}
+
+#estudios {
+    background: #d4f4dd; /* Verde pastel */
+    color: #333;
+}
+
+#proyectos {
+    background: linear-gradient(to bottom, #85188F 32%, #8C52C8 67%, #938BFF 100%);
+    padding: 50px 0;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.948);
+}
+
+#proyectos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Proyecto principal más grande */
+.proyecto.grande {
     width: 80%;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    max-width: 1100px;
+    margin: 20px auto;
+    background: rgba(198, 175, 212, 0.794); /* Fondo transparente con algo de color */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.2);
 }
-.info img {
-    height: 100px;
-    border-radius: 50%;
-}
+
+/* Contenedor de proyectos en dos columnas */
 .proyectos-grid {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
+    max-width: 80%;
+    margin: 20px auto;
 }
+
+/* Cada tarjeta tiene el mismo ancho y es transparente */
 .proyecto {
-    background: #ffd1dc;
+    width: 100%;
+    max-width: 1900px; /* Ancho fijo para todas las tarjetas */
+    background: rgba(255, 255, 255, 0.013); /* Fondo transparente */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(255, 255, 255, 0.034);
+    text-align: left;
+}
+
+/* Títulos y textos */
+.proyecto h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.proyecto p {
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+/* Imagen principal grande */
+.proyecto.grande .imagenes-proyecto img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Imágenes de los proyectos en la cuadrícula */
+.imagenes-proyecto {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.imagenes-proyecto img {
+    width: 180px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#tecnologias {
+    background: linear-gradient(to bottom, #ffffff, #e6e6e6);
+    padding: 50px 0;
+    text-align: center;
+}
+
+#tecnologias h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 20px;
+}
+
+.iconos-tecnologias {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.tecnologia {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 120px;
+    text-align: center;
+}
+
+.tecnologia img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.tecnologia p {
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: black;
+}
+
+#contacto {
+    background: #fcfcfa; /* Amarillo claro */
+    color: #333;
+}
+
+/* Agregamos un poco de espacio entre secciones */
+#acerca, #experiencia, #tecnologias, #estudios, #proyectos, #contacto {
+    padding: 50px;
+    border-radius: 5px;
+    margin: 40px auto;
+    width: 92%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info img {
+    height: 100px;
+    border-radius: 50%;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid rgba(255, 255, 255, 0.164);
+    position: absolute;
+    top: 83vh; /* Ajusta la posición para que quede justo entre la imagen de fondo y la sección "Acerca de Mí" */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    background: rgba(255, 255, 255, 0.222); /* Fondo blanco para destacarla */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
 }
