@@ -1,8 +1,33 @@
+/* Estilos generales */
 body {
-    margin: 0;
     font-family: Arial, sans-serif;
-    background: linear-gradient(to bottom, #f8f7f7, #020202);
+    margin: 0;
+    padding: 0;
     text-align: center;
+}
+
+/* Para pantallas pequeñas como teléfonos y tablets */
+@media (max-width: 760px) {
+    body {
+        font-size: 6px; /* Ajusta el tamaño de la fuente */
+    }
+    
+    img {
+        width: 50%; /* Hace que las imágenes sean más pequeñas */
+        height: auto;
+    }
+    
+    button, svg, i {
+        transform: scale(0.5); /* Hace más pequeños los botones e íconos */
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 768px) {
+    .container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
 }
 
 .contenedor {
@@ -17,13 +42,13 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: 20px 1px; /* Agrega espacio a los lados izquierdo y derecho del nav */
+    padding: 35px 3px; /* Agrega espacio a los lados izquierdo y derecho del nav */
     background: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
-    z-index: 99;
+    z-index: 90;
     font-family: 'Lily Script One', cursive;
 }
 
@@ -219,13 +244,62 @@ nav ul li a {
     color: black;
 }
 
+#cursos {
+    background: conic-gradient(from 50deg at 50% 50%,  
+        rgba(207, 176, 233, 0.861) 78%,
+        rgba(204, 156, 239, 0.901) 98%, 
+        rgba(207, 176, 233, 0.861) 5%);
+    padding: 50px 0;
+    text-align: center;
+    color: black;
+}
+
+
+#cursos h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.cursos-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.cursos {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+.cursos h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.cursos p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.imagenes-cursos img {
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
 #contacto {
     background: #fcfcfa; /* Amarillo claro */
     color: #333;
 }
 
 /* Agregamos un poco de espacio entre secciones */
-#acerca, #experiencia, #tecnologias, #estudios, #proyectos, #contacto {
+#acerca, #experiencia, #tecnologias, #estudios, #proyectos, #cursos, #contacto {
     padding: 50px;
     border-radius: 5px;
     margin: 40px auto;
@@ -251,3 +325,5 @@ nav ul li a {
     background: rgba(255, 255, 255, 0.222); /* Fondo blanco para destacarla */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
 }
+
+
